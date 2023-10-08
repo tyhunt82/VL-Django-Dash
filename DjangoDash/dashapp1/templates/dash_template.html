@@ -1,0 +1,7 @@
+{% extends "base_generic.html" %}  <!-- You can extend your base template if you have one -->
+
+{% load plotly_dash %}
+
+{% block content %}
+  {% plotly_app name="SimpleExample" %}
+{% endblock %}

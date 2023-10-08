@@ -28,3 +28,7 @@ def signup_view(request):
 @login_required
 def dashboard_view(request):
     return render(request, 'dashboard.html')
+
+def dash_view(request):
+    return render(request, 'dash_template.html')
+

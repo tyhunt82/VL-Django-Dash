@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.shortcuts import redirect
 
 def redirect_to_login(request):
@@ -26,4 +26,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', redirect_to_login, name='home'),
     path('', include('dashapp1.urls')), 
+    re_path('^dash/', include('django_plotly_dash.urls')),
 ]
